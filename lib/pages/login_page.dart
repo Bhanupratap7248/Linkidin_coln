@@ -15,7 +15,8 @@ class _LoginPageState extends State<LoginPage> {
         //crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Image.asset('assets/images/linkedin.png', width: 100, height: 60),
+          SizedBox(width: 56),
+          Image.asset('assets/images/linkedin .png', width: 100, height: 60),
         ],
       ),
     );
