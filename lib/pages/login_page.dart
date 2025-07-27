@@ -15,10 +15,15 @@ class _LoginPageState extends State<LoginPage> {
         //crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          SizedBox(width: 56),
+          SizedBox(width: 30),
           Image.asset('assets/images/linkedin .png', width: 100, height: 60),
         ],
+      
       ),
+      
+      // Column(), // Removed invalid usage of Column
     );
   }
 }
+
+  
