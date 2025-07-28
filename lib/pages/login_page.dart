@@ -11,19 +11,49 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Row(
-        //crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.start,
+      body: Column(
         children: [
-          SizedBox(width: 30),
-          Image.asset('assets/images/linkedin .png', width: 100, height: 60),
+          Row(
+            //crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(width: 30),
+              Image.asset(
+                'assets/images/linkedin .png',
+                width: 100,
+                height: 60,
+              ),
+            ],
+          ),
+          SizedBox(height: 50),
+          Padding(
+            padding: EdgeInsets.all(20),
+            child: TextField(
+              decoration: InputDecoration(
+                labelText: 'Email',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(14),
+                ),
+                prefixIcon: Icon(Icons.email),
+              ),
+            ),
+          ),
+          SizedBox(height: 0),
+          Padding(
+            padding: EdgeInsets.all(20),
+            child: TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                labelText: 'Password',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(14),
+                ),
+                prefixIcon: Icon(Icons.lock),
+              ),
+            ),
+          ),
         ],
-      
       ),
-      
-     
     );
   }
 }
-
-  
