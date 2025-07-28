@@ -21,7 +21,7 @@ class _LoginPageState extends State<LoginPage> {
       
       ),
       
-      // Column(), // Removed invalid usage of Column
+     
     );
   }
 }
