@@ -13,11 +13,12 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: Column(
         children: [
+          SizedBox(height: 20),
           Row(
             //crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SizedBox(width: 30),
+              SizedBox(width: 20),
               Image.asset(
                 'assets/images/linkedin .png',
                 width: 100,
@@ -25,7 +26,29 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ],
           ),
-          SizedBox(height: 50),
+          SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+
+            children: [
+              SizedBox(width: 20),
+              Text(
+                'Sign in',
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(width: 20),
+              Text(
+                'Stay updatreed on your professional world',
+                style: TextStyle(fontSize: 16, color: Colors.grey),
+              ),
+            ],
+          ),
+          SizedBox(height: 30),
           Padding(
             padding: EdgeInsets.all(20),
             child: TextField(
@@ -52,6 +75,42 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           ),
+          SizedBox(height: 5),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(width: 20),
+              Padding(
+                padding: EdgeInsets.only(right: 20),
+                child: Text(
+                  'Forgot Password?',
+                  style: TextStyle(color: Colors.blue),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 20),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: ElevatedButton(
+              onPressed: () {
+                // Handle login action
+              },
+              style: ElevatedButton.styleFrom(
+                minimumSize: Size(double.infinity, 50),
+                backgroundColor: const Color.fromARGB(255, 66, 77, 236),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(14),
+                ),
+              ),
+              child: Text(
+                style: TextStyle(fontSize: 18, color: Colors.white),
+                'Sign In',
+              ),
+            ),
+          ),
+          SizedBox(height: 20),
+          Divider(color: Colors.grey, thickness: 1),
         ],
       ),
     );
