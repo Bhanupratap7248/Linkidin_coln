@@ -44,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(width: 20),
               Text(
                 'Stay updatreed on your professional world',
-                style: TextStyle(fontSize: 16, color: Colors.grey),
+                style: TextStyle(fontSize: 16, color: Colors.black),
               ),
             ],
           ),
@@ -75,7 +75,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           ),
-          SizedBox(height: 5),
+          SizedBox(),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -95,6 +95,7 @@ class _LoginPageState extends State<LoginPage> {
             child: ElevatedButton(
               onPressed: () {
                 // Handle login action
+                Navigator.pushNamed(context, '/home');
               },
               style: ElevatedButton.styleFrom(
                 minimumSize: Size(double.infinity, 50),
@@ -111,6 +112,73 @@ class _LoginPageState extends State<LoginPage> {
           ),
           SizedBox(height: 20),
           Divider(color: Colors.grey, thickness: 1),
+          SizedBox(height: 20),
+
+          SizedBox(
+            height: 50,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: ElevatedButton(
+                onPressed: () {
+                  // Handle sign up with Facebook action
+                },
+                style: ElevatedButton.styleFrom(
+                  minimumSize: Size(double.infinity, 50),
+                  backgroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(14),
+                    side: BorderSide(color: Colors.grey),
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      'assets/images/apple logo.png',
+                      width: 60,
+                      height: 25,
+                    ),
+                    SizedBox(width: 8),
+                    Text(
+                      'Sign Up with Apple',
+                      style: TextStyle(fontSize: 18, color: Colors.black),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          SizedBox(height: 20),
+          SizedBox(
+            height: 50,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: ElevatedButton(
+                onPressed: () {
+                  // Handle sign up with Google action
+                },
+                style: ElevatedButton.styleFrom(
+                  minimumSize: Size(double.infinity, 50),
+                  backgroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(14),
+                    side: BorderSide(color: Colors.grey),
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset('assets/images/g.png', width: 60, height: 25),
+                    SizedBox(width: 8),
+                    Text(
+                      'Sign Up with Google',
+                      style: TextStyle(fontSize: 18, color: Colors.black),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
