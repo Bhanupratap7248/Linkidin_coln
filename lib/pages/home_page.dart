@@ -18,7 +18,7 @@ class HomePageState extends State<HomePage> {
             decoration: InputDecoration(
               hintText: 'Search',
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(30),
               ),
               prefixIcon: Icon(Icons.search),
             ),
@@ -32,6 +32,7 @@ class HomePageState extends State<HomePage> {
             ),
           ],
         ),
+
         body: Center(
           child: Text(
             'Welcome to the Home Page',
@@ -39,6 +40,21 @@ class HomePageState extends State<HomePage> {
           ),
         ),
         drawer: Drawer(),
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.notifications),
+              label: 'My Network',
+            ),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Post'),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Notifications',
+            ),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Jobs'),
+          ],
+        ),
       ),
     );
   }
