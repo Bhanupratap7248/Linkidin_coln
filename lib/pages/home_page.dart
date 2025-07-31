@@ -41,8 +41,16 @@ class HomePageState extends State<HomePage> {
         ),
         drawer: Drawer(),
         bottomNavigationBar: BottomNavigationBar(
+          //backgroundColor: Colors.black,
           items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(
+              icon: Image.asset(
+                'assets/images/linkedin .png',
+                width: 100,
+                height: 60,
+              ),
+              label: 'Home',
+            ),
             BottomNavigationBarItem(
               icon: Icon(Icons.notifications),
               label: 'My Network',
