@@ -1,6 +1,8 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Drawer;
 import 'package:iinkedin_clone/pages/login_page.dart';
 import 'package:iinkedin_clone/pages/home_page.dart';
+import 'package:iinkedin_clone/pages/drawer.dart';
+import 'package:iinkedin_clone/pages/massage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,10 +22,12 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       // home: const LoginPage(),
-      initialRoute: '/home',
+      initialRoute: '/massage',
       routes: {
         '/login': (context) => const LoginPage(),
         '/home': (context) => const HomePage(),
+        '/drawer': (context) => const Drawer(),
+        '/massage': (context) => const MyWidget(),
       },
     );
   }
