@@ -45,17 +45,29 @@ class HomePageState extends State<HomePage> {
           items: [
             BottomNavigationBarItem(
               icon: Image.asset(
-                'assets/images/linkedin .png',
-                width: 100,
-                height: 60,
+                'assets/images/home.png',
+                width: 50,
+                height: 30,
               ),
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.notifications),
+              icon: Image.asset(
+                'assets/images/friends.png',
+                width: 50,
+                height: 30,
+              ),
               label: 'My Network',
             ),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Post'),
+            BottomNavigationBarItem(
+              icon: Image.asset(
+                'assets/images/bell.png',
+                width: 50,
+                height: 30,
+              ),
+              label: 'Post',
+              
+            ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person),
               label: 'Notifications',
