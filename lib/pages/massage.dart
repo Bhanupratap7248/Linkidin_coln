@@ -17,7 +17,7 @@ class _MyWidgetState extends State<MyWidget> {
           style: TextStyle(color: Colors.black),
           decoration: InputDecoration(
             hintText: 'Search massages',
-            border: OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
+            border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
             prefixIcon: Icon(Icons.search),
           ),
         ),
@@ -37,8 +37,8 @@ class _MyWidgetState extends State<MyWidget> {
             iconSize: 30.0,
           ),
         ],
-        
       ),
+      
     );
   }
 }
