@@ -8,6 +8,15 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  void signOut(BuildContext context) {}
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,13 +29,12 @@ class HomePageState extends State<HomePage> {
               Navigator.pop(context); // 👈 goes back
             },
           ),
-          
 
           title: TextField(
             decoration: InputDecoration(
               hintText: 'Search',
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(20),
               ),
               prefixIcon: Icon(Icons.search),
             ),
@@ -35,7 +43,7 @@ class HomePageState extends State<HomePage> {
             IconButton(
               icon: Icon(Icons.message),
               onPressed: () {
-                // Handle messages
+                Navigator.pushNamed(context, '/massage');
               },
             ),
           ],
@@ -43,12 +51,35 @@ class HomePageState extends State<HomePage> {
             color: Colors.black, // Change icon color to white
           ),
         ),
-
-        body: Center(
-          child: Text(
-            'Welcome to the Home Page',
-            style: TextStyle(fontSize: 24),
-          ),
+        body: Column(
+          children: [
+            Divider(thickness: 8, height: 6, color: Colors.grey[300]),
+            Expanded(
+              child: Center(
+                child: ElevatedButton.icon(
+                  onPressed: () => signOut(context),
+                  label: Text("Sign out"),
+                  icon: Icon(Icons.logout),
+                ),
+              ),
+            ),
+          ],
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'friends'),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Post'),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Notifications',
+            ),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Jobs'),
+          ],
+          currentIndex: _selectedIndex, // track current index in state
+          onTap: _onItemTapped, // handle tab change
+          selectedItemColor: Colors.black, // color for selected item
+          unselectedItemColor: Colors.grey,
         ),
       ),
     );
