@@ -16,7 +16,7 @@ class HomePageState extends State<HomePage> {
     });
   }
 
-  void signOut(BuildContext context) {}
+  //void signOut(BuildContext context) {}
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -51,30 +51,42 @@ class HomePageState extends State<HomePage> {
             color: Colors.black, // Change icon color to white
           ),
         ),
-        body: Column(
-          children: [
-            Divider(thickness: 8, height: 6, color: Colors.grey[300]),
-            Expanded(
-              child: Center(
-                child: ElevatedButton.icon(
-                  onPressed: () => signOut(context),
-                  label: Text("Sign out"),
-                  icon: Icon(Icons.logout),
-                ),
-              ),
-            ),
-          ],
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Divider(thickness: 10, height: 10, color: Colors.grey[300]),
+              // Expanded(
+              //   child: Center(
+              //     child: ElevatedButton.icon(
+              //       onPressed: () => signOut(context),
+              //       label: Text("Sign out"),
+              //       icon: Icon(Icons.logout),
+              //     ),
+              //   ),
+              // ),
+              
+            ],
+          ),
         ),
         bottomNavigationBar: BottomNavigationBar(
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'friends'),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Post'),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person),
+              icon: Icon(Icons.people),
+              label: 'My Network',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.post_add_rounded),
+              label: 'Post',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.notifications_active),
               label: 'Notifications',
             ),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Jobs'),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.badge_outlined),
+              label: 'Jobs',
+            ),
           ],
           currentIndex: _selectedIndex, // track current index in state
           onTap: _onItemTapped, // handle tab change
