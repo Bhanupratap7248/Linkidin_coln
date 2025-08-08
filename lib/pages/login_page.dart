@@ -61,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           ),
-          SizedBox(height: 0),
+
           Padding(
             padding: EdgeInsets.all(20),
             child: TextField(
@@ -82,9 +82,15 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(width: 20),
               Padding(
                 padding: EdgeInsets.only(right: 20),
-                child: Text(
-                  'Forgot Password?',
-                  style: TextStyle(color: Colors.blue),
+                child: TextButton(
+                  onPressed: () {
+                    // Navigate to reset password screen or trigger reset flow
+                  },
+                  style: TextButton.styleFrom(foregroundColor: Colors.white),
+                  child: Text(
+                    'Forgot Password?',
+                    style: TextStyle(color: Colors.blue),
+                  ),
                 ),
               ),
             ],
